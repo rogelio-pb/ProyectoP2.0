@@ -21,11 +21,14 @@ public:
 	void setCantidad(int c) { cantidad = c; }
 
 	void mostrar() const {
-		std::cout << "Codigo: " << codigo
-			<< ", Nombre: " << nombre
-			<< ", Precio: " << precio
-			<< ", Cantidad: " << cantidad << std::endl;
+		std::cout << "Codigo: " << codigo << "\n"
+			<< "Nombre: " << nombre << "\n"
+			<< "Precio: " << precio << "\n"
+			<< "Cantidad: " << cantidad << "\n"
+			<< "--------------------------\n";
 	}
+
+
 	json toJSON() const {
 		return json{
 			{"codigo", codigo},

@@ -4,6 +4,7 @@
 #include "ObserverStock.h"
 
 int main() {
+    
     FactoryProducto* fabrica = new FactoryProducto(); 
     Inventario inv(fabrica);                         
 

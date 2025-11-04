@@ -37,12 +37,8 @@ public:
 
 		productos.clear();
 		for (auto& item : j["productos"]) {
-			Producto p = factory->crearProducto(
-				item["codigo"],
-				item["nombre"],
-				item["precio"],
-				item["cantidad"]
-			);
+			Producto p(item["codigo"], item["nombre"], item["precio"], item["cantidad"]);
+			productos.push_back(p);
 		}
 		std::cout << "Productos cargados desde " << archivo << std::endl;
 	}
