@@ -170,7 +170,14 @@
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\FactoryProducto.h" />
+    <ClInclude Include="include\Inventario.h" />
+    <ClInclude Include="include\ObserverStock.h" />
     <ClInclude Include="include\Prerequisites.h" />
+    <ClInclude Include="include\Productos.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="source\Productos.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
