@@ -1,5 +1,13 @@
+/**
+ * @file Productos.h
+ * @brief Define la clase Producto que representa un artículo en el inventario.
+ */
 #pragma once
 #include "Prerequisites.h"
+ /**
+  * @class Producto
+  * @brief Representa un producto con código, nombre, precio y cantidad.
+  */
 
 class Producto {
 private:
@@ -7,6 +15,13 @@ private:
 	std::string nombre;
 	double precio;
 	int cantidad;
+	/**
+ * @brief Constructor del producto.
+ * @param c Código del producto.
+ * @param n Nombre del producto.
+ * @param p Precio del producto.
+ * @param cant Cantidad en inventario.
+ */
 
 public:
 	Producto(std::string c, std::string n, double p, int cant)
@@ -28,6 +43,10 @@ public:
 			<< "--------------------------\n";
 	}
 
+	/**
+	 * @brief Convierte el producto a formato JSON.
+	 * @return Objeto JSON con los datos del producto.
+	 */
 
 	json toJSON() const {
 		return json{

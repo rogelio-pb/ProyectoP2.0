@@ -1,9 +1,16 @@
+/**
+ * @file Inventario.h
+ * @brief Gestiona una colección de productos utilizando patrones Factory y Observer.
+ */
 #pragma once 
 #include "Prerequisites.h"
 #include "Productos.h"
 #include "FactoryProducto.h"
 #include "ObserverStock.h"
-
+ /**
+  * @class Inventario
+  * @brief Administra los productos y notifica a observadores cuando hay stock bajo.
+  */
 class Inventario {
 	private:
 	std::vector<Producto> productos;
@@ -20,6 +27,10 @@ public:
 		observadores.push_back(obs);
 	}
 
+/**
+ * @brief Notifica a todos los observadores sobre un producto.
+ * @param producto Nombre del producto afectado.
+ */
 	void notificar(const std:: string& producto) {
 		for (auto o : observadores) 
 			o->actualizar(producto);

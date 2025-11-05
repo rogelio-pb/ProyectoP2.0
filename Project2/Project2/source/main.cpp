@@ -1,7 +1,23 @@
+/**
+ * @file main.cpp
+ * @brief Programa principal del sistema de gestión de inventario.
+ *
+ * Este archivo implementa un menú interactivo para gestionar productos
+ * utilizando los patrones de diseño Factory y Observer.
+ */
 #include "Prerequisites.h"
 #include "Inventario.h"
 #include "FactoryProducto.h"
 #include "ObserverStock.h"
+
+ /**
+  * @brief Función principal del programa.
+  *
+  * Crea un inventario, carga los productos desde un archivo JSON y
+  * ofrece un menú para administrar los productos (agregar, editar, eliminar, vender, etc.).
+  *
+  * @return int Código de salida del programa (0 = éxito).
+  */
 
 int main() {
     

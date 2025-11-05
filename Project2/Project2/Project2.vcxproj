@@ -172,6 +172,7 @@
   <ItemGroup>
     <ClInclude Include="include\FactoryProducto.h" />
     <ClInclude Include="include\Inventario.h" />
+    <ClInclude Include="include\Observer.h" />
     <ClInclude Include="include\ObserverStock.h" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Productos.h" />
