@@ -2,15 +2,15 @@
   "productos": [
     {
       "codigo": "001",
-      "nombre": "Laptop",
+      "nombre": "Bocina",
       "precio": 15000.0,
       "cantidad": 10
     },
     {
       "codigo": "002",
-      "nombre": "Mouse",
+      "nombre": "Mascara",
       "precio": 300.0,
-      "cantidad": 25
+      "cantidad": 15
     }
   ]
 }
