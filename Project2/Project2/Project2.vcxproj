@@ -171,9 +171,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\FactoryProducto.h" />
+    <ClInclude Include="include\Gasolineria\Gasolineria.h" />
+    <ClInclude Include="include\Gasolineria\RegistroGasolina.h" />
+    <ClInclude Include="include\Gasolineria\ValidacionGas.h" />
     <ClInclude Include="include\Inventario.h" />
     <ClInclude Include="include\Observer.h" />
     <ClInclude Include="include\ObserverStock.h" />
+    <ClInclude Include="include\Pagos\CreditoStrategy.h" />
+    <ClInclude Include="include\Pagos\DebitoStrategy.h" />
+    <ClInclude Include="include\Pagos\EfectivoStrategy.h" />
+    <ClInclude Include="include\Pagos\PagosStrategy.h" />
+    <ClInclude Include="include\Pagos\Strategy.h" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Productos.h" />
   </ItemGroup>

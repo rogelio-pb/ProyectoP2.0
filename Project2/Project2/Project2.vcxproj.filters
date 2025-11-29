@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivos de encabezado\Pagos">
+      <UniqueIdentifier>{d361ec2f-fb2c-4407-99e4-5844b5d12d1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Archivos de encabezado\Gasolineria">
+      <UniqueIdentifier>{4cae1aa0-f304-46f5-8725-157175f02c80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\main.cpp">
@@ -37,6 +43,30 @@
     </ClInclude>
     <ClInclude Include="include\Observer.h">
       <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pagos\Strategy.h">
+      <Filter>Archivos de encabezado\Pagos</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pagos\PagosStrategy.h">
+      <Filter>Archivos de encabezado\Pagos</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pagos\EfectivoStrategy.h">
+      <Filter>Archivos de encabezado\Pagos</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pagos\DebitoStrategy.h">
+      <Filter>Archivos de encabezado\Pagos</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pagos\CreditoStrategy.h">
+      <Filter>Archivos de encabezado\Pagos</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Gasolineria\Gasolineria.h">
+      <Filter>Archivos de encabezado\Gasolineria</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Gasolineria\RegistroGasolina.h">
+      <Filter>Archivos de encabezado\Gasolineria</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Gasolineria\ValidacionGas.h">
+      <Filter>Archivos de encabezado\Gasolineria</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

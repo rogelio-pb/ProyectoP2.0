@@ -9,6 +9,10 @@
 #include "Inventario.h"
 #include "FactoryProducto.h"
 #include "ObserverStock.h"
+#include "Gasolineria/Gasolineria.h"
+#include "Pagos/EfectivoStrategy.h"
+#include "Pagos/DebitoStrategy.h"
+#include "Pagos/CreditoStrategy.h"
 
  /**
   * @brief Función principal del programa.
@@ -39,7 +43,8 @@ int main() {
         std::cout << "4. Eliminar Producto\n";
         std::cout << "5. Editar Producto\n";
         std::cout << "6. Vender Producto\n";
-        std::cout << "7. Guardar y Salir\n";
+        std::cout << "7. Cargar Gasolineria:\n";
+        std::cout << "8. Guardar y Salir\n";
         std::cout << "Seleccione una opcion: ";
         std::cin >> opcion;
 
@@ -105,13 +110,47 @@ int main() {
             break;
         }
         case 7:
+        {
+            GasolineriaFacade gasolineria;
+            gasolineria.mostrarMensajeBienvenida();
+            int monto;
+            std::cout << "Ingrese el monto a pagar por la gasolina: ";
+            std::cin >> monto;
+            int metodoPago;
+            std::cout << "Seleccione el metodo de pago:\n";
+            std::cout << "1. Efectivo\n";
+            std::cout << "2. Debito\n";
+            std::cout << "3. Credito\n";
+            std::cin >> metodoPago;
+            Strategy* estrategia = nullptr;
+            switch (metodoPago) {
+            case 1:
+                estrategia = new EfectivoStrategy();
+                break;
+            case 2:
+                estrategia = new DebitoStrategy();
+                break;
+            case 3:
+                estrategia = new CreditoStrategy();
+                break;
+            default:
+                std::cout << "Metodo de pago invalido." << std::endl;
+                continue;
+            }
+            gasolineria.procesarPago(estrategia, monto);
+            gasolineria.registrarVenta();
+            delete estrategia;
+            break;
+        }
+        case 8:
             inv.guardar(ruta);
             std::cout << "Inventario guardado. Saliendo...\n";
             break;
         default:
             std::cout << "Opcion invalida. Intente de nuevo.\n";
         }
-    } while (opcion != 7);
+
+    } while (opcion != 8);
 
     return 0;
 }
