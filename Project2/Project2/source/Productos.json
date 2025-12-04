@@ -1,3 +1,6 @@
+/*
+    Archivo JSON que contiene una lista de productos con sus detalles.
+*/
 {
   "productos": [
     {

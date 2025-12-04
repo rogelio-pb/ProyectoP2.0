@@ -9,12 +9,9 @@
   * @brief Representa un producto con código, nombre, precio y cantidad.
   */
 
-class Producto {
-private:
-	std::string codigo;
-	std::string nombre;
-	double precio;
-	int cantidad;
+class
+	Producto {
+
 	/**
  * @brief Constructor del producto.
  * @param c Código del producto.
@@ -56,4 +53,9 @@ public:
 			{"cantidad", cantidad}
 		};
 	}
+private:
+	std::string codigo;
+	std::string nombre;
+	double precio;
+	int cantidad;
 };

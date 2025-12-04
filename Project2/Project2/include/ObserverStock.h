@@ -16,6 +16,7 @@ class AlertaStockBajo : public Observer
 public:
 	void actualizar(const std:: string& producto) override {
 		
-		std::cout << "Alerta: El producto: " << producto <<" Esta bajo en unidades" << std::endl;
+		std::cout << "Alerta: El producto: " << producto <<
+			" Esta bajo en unidades" << std::endl;
 	}
 };

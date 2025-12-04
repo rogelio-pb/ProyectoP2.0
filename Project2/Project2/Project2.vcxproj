@@ -180,10 +180,10 @@
     <ClInclude Include="include\Pagos\CreditoStrategy.h" />
     <ClInclude Include="include\Pagos\DebitoStrategy.h" />
     <ClInclude Include="include\Pagos\EfectivoStrategy.h" />
-    <ClInclude Include="include\Pagos\PagosStrategy.h" />
     <ClInclude Include="include\Pagos\Strategy.h" />
     <ClInclude Include="include\Prerequisites.h" />
     <ClInclude Include="include\Productos.h" />
+    <ClInclude Include="include\Ticket.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="source\Productos.json" />

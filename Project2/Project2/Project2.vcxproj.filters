@@ -47,9 +47,6 @@
     <ClInclude Include="include\Pagos\Strategy.h">
       <Filter>Archivos de encabezado\Pagos</Filter>
     </ClInclude>
-    <ClInclude Include="include\Pagos\PagosStrategy.h">
-      <Filter>Archivos de encabezado\Pagos</Filter>
-    </ClInclude>
     <ClInclude Include="include\Pagos\EfectivoStrategy.h">
       <Filter>Archivos de encabezado\Pagos</Filter>
     </ClInclude>
@@ -67,6 +64,9 @@
     </ClInclude>
     <ClInclude Include="include\Gasolineria\ValidacionGas.h">
       <Filter>Archivos de encabezado\Gasolineria</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Ticket.h">
+      <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

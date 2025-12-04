@@ -1,32 +1,43 @@
 #pragma once
 #include "Prerequisites.h"
 
+/**
+ * @class ValidacionGas
+ * @brief Clase encargada de validar que el monto pagado coincida con el costo real de la gasolina.
+ *
+ * Esta clase compara:
+ * Litros cargados
+ * Precio por litro
+ * Monto que el usuario dice haber pagado
+ *
+ * Y verifica que el total sea correcto dentro de un margen mínimo de error.
+ */
+
 class ValidacionGas
 {
 public:
-	ValidacionGas()=default;
-	~ValidacionGas()=default;
+    ValidacionGas() = default;
+    ~ValidacionGas() = default;
+    /*
+	*@brief Valida que el monto pagado coincida con el costo real de la gasolina.
+	* @param precioLitro Precio por litro de gasolina.
+	* @param litros Cantidad de litros cargados.
+	* @param monto Monto que el usuario dice haber pagado.
+	* @return true si el monto es correcto, false en caso contrario.
+	* @note Se permite una pequeña tolerancia de 0.001 para errores de redondeo.
+    */
 
-	void ValidarLitros(double litros, double monto) {
-		if (litros == monto) {
-			std::cout << "Cantidad de litros correcta" << std::endl;
-		}
-		else {
-			std::cout << "Cantidad de litros incorrecta" << std::endl;
-		}
-	}
+    bool ValidarMonto(double litros, double precioLitro, double monto)
+    {
+        double totalCalculado = litros * precioLitro;
 
-	/*/void ValidarMonto(double litros, double monto, double precioLitro) {
-		if (monto == litros * precioLitro) {
-			std::cout << "Monto correcto" << std::endl;
-		}
-		else {
-			std::cout << "Monto incorrecto" << std::endl;
-		}
-	}/*/
-
-
-private:
-	
-
+        if (fabs(totalCalculado - monto) < 0.001) {
+            return true;
+        }
+        else {
+            std::cout << "Monto incorrecto. Total real: "
+                << totalCalculado << std::endl;
+            return false;
+        }
+    }
 };
